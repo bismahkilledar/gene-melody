@@ -16,13 +16,7 @@ INSTRUMENTS = {
     60: "French Horn", 73: "Flute", 81: "Lead Synth", 89: "New Age Pad"
 }
 DNA_MEANINGS = {
-        # Core codons and classic promoter element
-    "TATA": "TATA-like core motif (promoter element; often near transcription start).",
-    "ATG": "Start codon (ATG) — signals start of translation (Methionine).",
-    "TAG": "Stop codon (TAG) — termination of translation.",
-    "TAA": "Stop codon (TAA) — termination of translation.",
-    "TGA": "Stop codon (TGA) — termination of translation.",
-
+      
     # TATA box variants
     "TATAAA": "TATA box (variant: TATAAA) — promoter element near TSS.",
     "TATATA": "TATA box (variant: TATATA) — promoter element near TSS.",
