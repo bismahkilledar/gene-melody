@@ -16,7 +16,7 @@ INSTRUMENTS = {
     60: "French Horn", 73: "Flute", 81: "Lead Synth", 89: "New Age Pad"
 }
 DNA_MEANINGS = {
-
+      
     # TATA box variants
     "TATAAA": "TATA box (variant: TATAAA) — promoter element near TSS.",
     "TATATA": "TATA box (variant: TATATA) — promoter element near TSS.",
@@ -199,8 +199,14 @@ if st.button("Generate Music & Analysis"):
         st.download_button("Download MIDI File", midi_data, file_name="dna_music.mid", mime="audio/midi")
 
         # Generate analysis text
-        analysis_text = f"""
-DNA Sequence Analysis
+        analysis_text = f"""DNA Sequence Analysis
+
+Input DNA Sequence:
+{dna}
+
+Tempo: {bpm} BPM
+Instrument: {INSTRUMENTS.get(program, f'Program {program}')}
+
 Length: {stats['total']} bp
 GC%: {stats['gc_percent']:.2f}%
 AT%: {stats['at_percent']:.2f}%
@@ -214,4 +220,3 @@ ORF Summary:
 {summarize_orfs(orfs)}
 """
         st.download_button("Download Analysis TXT", analysis_text, file_name="analysis.txt")
-
